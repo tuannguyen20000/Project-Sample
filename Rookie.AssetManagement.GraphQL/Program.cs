@@ -28,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGraphQLHttp("/graphql");
+app.MapGraphQL("/graphql");
 
 app.Run();

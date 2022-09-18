@@ -361,3 +361,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /.vscode
+Rookie.AssetManagement/appsettings.Development.json
+Rookie.AssetManagement.GraphQL/appsettings.Development.json

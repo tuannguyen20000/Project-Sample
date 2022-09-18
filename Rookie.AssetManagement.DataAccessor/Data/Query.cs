@@ -1,4 +1,5 @@
-﻿using HotChocolate.Data;
+﻿using HotChocolate;
+using HotChocolate.Data;
 using Rookie.AssetManagement.DataAccessor.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Rookie.AssetManagement.DataAccessor.Data
         [UseProjection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Brand> GetBrands => 
-            new List<Brand>().AsQueryable();
+        public IQueryable<Brand> GetBrands([Service] ApplicationDbContext context)
+            => context.Brands;
     }
 }
