@@ -1,5 +1,5 @@
 using Rookie.AssetManagement.DataAccessor;
-using Rookie.AssetManagement.DataAccessor.Data;
+using Rookie.AssetManagement.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ builder.Services.AddDataAccessorLayer(builder.Configuration);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddGraphQLServer().AddQueryType<Query>().AddProjections().AddFiltering().AddSorting();
+builder.Services.AddBusinessLayer();
 
 var app = builder.Build();
 
@@ -30,4 +30,6 @@ app.MapControllers();
 
 app.MapGraphQL("/graphql");
 
-app.Run();
+app.MapGraphQLVoyager("ui/voyager");
+
+await app.RunAsync();

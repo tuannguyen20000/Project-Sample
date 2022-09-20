@@ -16,6 +16,8 @@
     "bootstrap": "5.2.0",
     "file-saver": "^2.0.5",
     "formik": "^2.2.9",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "install": "^0.13.0",
     "npm": "^8.15.0",
     "nprogress": "^0.2.0",
