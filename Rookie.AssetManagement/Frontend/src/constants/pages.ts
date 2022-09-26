@@ -10,4 +10,7 @@ export const EDIT_BRAND_ID = (id: string | number) => `edit/${id}`;
 export const BRAND_LIST_LINK = '/brand';
 export const BRAND_PARENT_ROOT = '..';
 
+export const CHATAPP = 'chat/*';
+export const CHAT_LIST = '*';
+
 export const NOTFOUND = '/notfound';

@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 
-import { HOME, BRAND } from '../constants/pages';
+import { HOME, BRAND, CHATAPP } from '../constants/pages';
 import InLineLoader from "../components/InlineLoader";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import LayoutRoute from "./LayoutRoute";
@@ -14,6 +14,7 @@ import { me } from "src/containers/Authorize/reducer";
 const Home = lazy(() => import('../containers/Home'));
 const Login = lazy(() => import('../containers/Authorize'));
 const Brand = lazy(() => import('../containers/Brand'));
+const ChatApp = lazy(() => import('../containers/ChatApp'));
 const Brand1 = lazy(() => import('../containers/Brand1'));
 const NotFound = lazy(() => import("../containers/NotFound"));
 
@@ -49,6 +50,14 @@ const AppRoutes = () => {
               <Brand />
             </LayoutRoute>
 
+          } 
+        />
+        <Route 
+          path={CHATAPP} 
+          element={
+            <LayoutRoute>
+              <ChatApp />
+            </LayoutRoute>
           } 
         />
       </Routes>

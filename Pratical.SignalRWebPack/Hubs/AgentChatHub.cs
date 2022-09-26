@@ -3,17 +3,14 @@ using Microsoft.AspNetCore.SignalR;
 namespace Pratical.SignalRWebPack.Hubs;
 public class AgentChatHub : Hub
 {
-    public async Task NewMessage(long username, string message)
+    public async Task SendAll(long username, string message)
         => await Clients.All.SendAsync("messageReceived", username, message);
 
+    public async Task SendToConnection(string data, string connectionId)
+    => await Clients.Client(connectionId).SendAsync("broadcasttoclient", data);
 
-    public override async Task OnConnectedAsync()
-        => await Clients.Others.SendAsync("ReceiveNotification", $"{DateTime.Now.ToString("M/d/yyyy")} join chat");
-
-
-    public override async Task OnDisconnectedAsync(Exception exception)
-        => await Clients.Others.SendAsync("ReceiveNotification", $"{DateTime.Now.ToString("M/d/yyyy")} left chat");
-
+    public async Task SendToUser(string data, string userId)
+    => await Clients.User(userId).SendAsync("broadcasttouser", data);
 }
 
 

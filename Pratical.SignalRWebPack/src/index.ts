@@ -31,7 +31,7 @@ btnSend.addEventListener("click", send);
 
 function send() {
   if(tbMessage.value.trim().length > 0) {
-    connection.send("newMessage", username, tbMessage.value)
+    connection.send("sendAll", username, tbMessage.value)
     .then(() => (tbMessage.value = ""));
   }
 
