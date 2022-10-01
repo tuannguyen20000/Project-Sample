@@ -54,7 +54,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowOrigins",
         builder =>
         {
-            builder.WithOrigins("http://localhost:3000")
+            builder.WithOrigins("https://localhost:5001")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -65,7 +65,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
-    
+
     try
     {
         var userManager = serviceProvider.GetRequiredService<UserManager<User>>();
@@ -73,7 +73,7 @@ using (var scope = app.Services.CreateScope())
     }
     catch (Exception ex)
     {
-        Console.WriteLine(ex);   
+        Console.WriteLine(ex);
     }
 }
 

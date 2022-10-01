@@ -3,11 +3,13 @@ using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Provider.Polly;
 using Ocelot.Middleware;
+using Pratical.ApiGateway.Extensions.ServiceCollection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+builder.Services.AddJwtAuthenticationGateway();
 builder.Services.AddOcelot(builder.Configuration).AddEureka()
     .AddCacheManager(x =>
     {

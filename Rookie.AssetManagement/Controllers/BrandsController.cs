@@ -12,7 +12,6 @@ using Rookie.AssetManagement.Contracts.Dtos.BrandDtos;
 namespace Rookie.AssetManagement.Controllers
 {
     [ApiController]
-    [AllowAnonymous]
     [Route("api/[controller]")]
     public class BrandsController : ControllerBase
     {
@@ -25,21 +24,22 @@ namespace Rookie.AssetManagement.Controllers
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult<PagedResponseModel<BrandDto>>> GetBrands(
-            [FromQuery]BrandQueryCriteriaDto brandCriteriaDto,
+            [FromQuery] BrandQueryCriteriaDto brandCriteriaDto,
             CancellationToken cancellationToken)
         {
             var brandResponses = await _brandService.GetByPageAsync(
-                                            brandCriteriaDto, 
+                                            brandCriteriaDto,
                                             cancellationToken);
             return Ok(brandResponses);
         }
 
         [HttpGet("{id}")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ActionResult<BrandDto>> GetBrandById(int id)
         {
             var brandResponses = await _brandService.GetByIdAsync(id);
-            if(brandResponses == null) {
+            if (brandResponses == null)
+            {
                 return NotFound();
             }
             return Ok(brandResponses);

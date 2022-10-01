@@ -29,28 +29,17 @@ public class AuthController : ControllerBase
             new Claim(JwtRegisteredClaimNames.Sub, name),
         };
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTSettings.Key));
-        var tokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = false,
-            ClockSkew = TimeSpan.Zero,
-            ValidIssuer = JWTSettings.Issuer,
-            ValidAudience = JWTSettings.Audience,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTSettings.Key))
-        };
         var token = new JwtSecurityToken(
+            issuer: JWTSettings.Issuer,
+            audience: JWTSettings.Audience,
             claims: claims,
-            expires: DateTime.Now.AddHours(3),
-            signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
+            expires: DateTime.Now.AddMinutes(JWTSettings.DurationInMinutes),
+            signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature)
         );
-
-        var encodedJwt = new JwtSecurityTokenHandler().WriteToken(token);
         var response = new
         {
-            accessToken = encodedJwt,
-            expriresIn = TimeSpan.FromMinutes(2).TotalSeconds
+            accessToken = new JwtSecurityTokenHandler().WriteToken(token),
+            expriresIn = DateTime.Now.AddMinutes(JWTSettings.DurationInMinutes),
         };
         return Ok(response);
     }

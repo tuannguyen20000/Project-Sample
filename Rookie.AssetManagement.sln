@@ -19,6 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rookie.AssetManagement.GraphQL", "Rookie.AssetManagement.GraphQL\Rookie.AssetManagement.GraphQL.csproj", "{394A493E-EED6-4D52-8810-1525885CBCCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratical.ApiGateway", "Pratical.ApiGateway\Pratical.ApiGateway.csproj", "{BEADF581-5F6C-4C32-B3FF-F18A0BF89A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratical.SignalRWebPack", "Pratical.SignalRWebPack\Pratical.SignalRWebPack.csproj", "{7996B223-2144-4FF4-96A6-E90F4ECADD2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratical.Auth", "Pratical.Auth\Pratical.Auth.csproj", "{B9564431-DDE4-4929-8EF2-508C2D35E250}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +63,18 @@ Global
 		{394A493E-EED6-4D52-8810-1525885CBCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{394A493E-EED6-4D52-8810-1525885CBCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{394A493E-EED6-4D52-8810-1525885CBCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEADF581-5F6C-4C32-B3FF-F18A0BF89A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEADF581-5F6C-4C32-B3FF-F18A0BF89A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEADF581-5F6C-4C32-B3FF-F18A0BF89A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEADF581-5F6C-4C32-B3FF-F18A0BF89A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7996B223-2144-4FF4-96A6-E90F4ECADD2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7996B223-2144-4FF4-96A6-E90F4ECADD2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7996B223-2144-4FF4-96A6-E90F4ECADD2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7996B223-2144-4FF4-96A6-E90F4ECADD2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9564431-DDE4-4929-8EF2-508C2D35E250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9564431-DDE4-4929-8EF2-508C2D35E250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9564431-DDE4-4929-8EF2-508C2D35E250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9564431-DDE4-4929-8EF2-508C2D35E250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
