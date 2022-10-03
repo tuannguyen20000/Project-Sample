@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Rookie.AssetManagement.Contracts.Constants;
+using Services.Brands.BrandsSPA.Rookie.AssetManagement.Contracts.Constants;
 
 namespace Pratical.Auth.Controllers;
 

@@ -1,15 +1,33 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Services.Brands.BrandsSPA.Rookie.AssetManagement.Contracts.Constants;
+using Services.Brands.BrandsSPA.Rookie.AssetManagement.DataAccessor.Data;
+using Services.Brands.BrandsSPA.Rookie.AssetManagement.DataAccessor.Entities;
+using System;
 using System.Text;
 
-namespace Pratical.ApiGateway.Extensions.ServiceCollection
+namespace Services.Brands.BrandsSPA.Rookie.AssetManagement.Extensions.ServiceCollection
 {
-    public static class AuthenticationGatewayRegister
+    public static class AuthenticationRegister
     {
-        public static void AddJwtAuthenticationGateway(this IServiceCollection services)
+        public static void AddAuthenticationRegister(this IServiceCollection services)
         {
+            services.AddIdentity<User, IdentityRole<int>>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 5;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+            })
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

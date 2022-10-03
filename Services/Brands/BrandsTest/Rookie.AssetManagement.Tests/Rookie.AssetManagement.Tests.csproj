@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ensure.That" Version="10.1.0" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Moq" Version="4.16.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BrandsSPA\Rookie.AssetManagement.Business\Rookie.AssetManagement.Business.csproj" />
+    <ProjectReference Include="..\..\BrandsSPA\Rookie.AssetManagement\Rookie.AssetManagement.csproj" />
+    <ProjectReference Include="..\..\BrandsSPA\Rookie.AssetManagement.Contracts\Rookie.AssetManagement.Contracts.csproj" />
+    <ProjectReference Include="..\..\BrandsSPA\Rookie.AssetManagement.DataAccessor\Rookie.AssetManagement.DataAccessor.csproj" />
+  </ItemGroup>
+
+</Project>

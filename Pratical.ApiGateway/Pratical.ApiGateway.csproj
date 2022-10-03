@@ -14,8 +14,8 @@
     <PackageReference Include="Ocelot.Provider.Polly" Version="18.0.0" />
   </ItemGroup>
 
-    <ItemGroup>
-    <ProjectReference Include="..\Rookie.AssetManagement.Contracts\Rookie.AssetManagement.Contracts.csproj" />
+  <ItemGroup>
+        <ProjectReference Include="..\Services\Brands\BrandsSPA\Rookie.AssetManagement.Contracts\Rookie.AssetManagement.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

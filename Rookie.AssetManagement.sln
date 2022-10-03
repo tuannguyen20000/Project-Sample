@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement", "Rookie.AssetManagement\Rookie.AssetManagement.csproj", "{119726B2-B0AA-4256-A1B3-27B603754645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement", "Services\Brands\BrandsSPA\Rookie.AssetManagement\Rookie.AssetManagement.csproj", "{119726B2-B0AA-4256-A1B3-27B603754645}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Tests", "Rookie.AssetManagement.Tests\Rookie.AssetManagement.Tests.csproj", "{95A19A0B-5D6C-472D-9AFE-5DC68E053720}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Tests", "Services\Brands\BrandsTest\Rookie.AssetManagement.Tests\Rookie.AssetManagement.Tests.csproj", "{95A19A0B-5D6C-472D-9AFE-5DC68E053720}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.DataAccessor", "Rookie.AssetManagement.DataAccessor\Rookie.AssetManagement.DataAccessor.csproj", "{D63D1604-5A65-4DE8-A158-660369DE02AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.DataAccessor", "Services\Brands\BrandsSPA\Rookie.AssetManagement.DataAccessor\Rookie.AssetManagement.DataAccessor.csproj", "{D63D1604-5A65-4DE8-A158-660369DE02AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Business", "Rookie.AssetManagement.Business\Rookie.AssetManagement.Business.csproj", "{E05857E5-9DE6-4340-AF43-B0A75F9D5838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Business", "Services\Brands\BrandsSPA\Rookie.AssetManagement.Business\Rookie.AssetManagement.Business.csproj", "{E05857E5-9DE6-4340-AF43-B0A75F9D5838}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Contracts", "Rookie.AssetManagement.Contracts\Rookie.AssetManagement.Contracts.csproj", "{44F596E2-8132-4917-B89C-26249771895D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.Contracts", "Services\Brands\BrandsSPA\Rookie.AssetManagement.Contracts\Rookie.AssetManagement.Contracts.csproj", "{44F596E2-8132-4917-B89C-26249771895D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.UnitTests", "Rookie.AssetManagement.UnitTests\Rookie.AssetManagement.UnitTests.csproj", "{4D77CA1D-FD1A-4EEC-8756-341A2D5FA5EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.UnitTests", "Services\Brands\BrandsTest\Rookie.AssetManagement.UnitTests\Rookie.AssetManagement.UnitTests.csproj", "{4D77CA1D-FD1A-4EEC-8756-341A2D5FA5EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.IntegrationTests", "Rookie.AssetManagement.IntegrationTests\Rookie.AssetManagement.IntegrationTests.csproj", "{8F3DEDF6-E612-4DA0-A38D-2B62C7A41DEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.AssetManagement.IntegrationTests", "Services\Brands\BrandsTest\Rookie.AssetManagement.IntegrationTests\Rookie.AssetManagement.IntegrationTests.csproj", "{8F3DEDF6-E612-4DA0-A38D-2B62C7A41DEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rookie.AssetManagement.GraphQL", "Rookie.AssetManagement.GraphQL\Rookie.AssetManagement.GraphQL.csproj", "{394A493E-EED6-4D52-8810-1525885CBCCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rookie.AssetManagement.GraphQL", "Services\Brands\BrandsGrapQL\Rookie.AssetManagement.GraphQL\Rookie.AssetManagement.GraphQL.csproj", "{394A493E-EED6-4D52-8810-1525885CBCCE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratical.ApiGateway", "Pratical.ApiGateway\Pratical.ApiGateway.csproj", "{BEADF581-5F6C-4C32-B3FF-F18A0BF89A55}"
 EndProject
